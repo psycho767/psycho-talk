@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web:
+    image: psychopc/psycho-talk:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - BASE_WEBHOOK_URL=http://default-url.com
+    volumes:
+      - .:/usr/src/app
